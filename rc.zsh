@@ -1,5 +1,6 @@
 # Silently remove any conflicting aliases
 unalias postpr 2>/dev/null
+unalias gpr 2>/dev/null
 unalias gc 2>/dev/null
 unalias ga 2>/dev/null
 unalias gp 2>/dev/null
@@ -26,6 +27,12 @@ postpr() {
   git branch -d "$current_branch" || echo "Failed to delete branch $current_branch. Maybe unmerged changes?"
 
   echo "Switched to master, pulled latest, and deleted branch $current_branch"
+}
+
+gpr() {
+  git checkout -b $1
+  git push origin $1
+  git branch -D $1
 }
 
 gc() {

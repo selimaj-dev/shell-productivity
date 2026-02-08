@@ -21,7 +21,8 @@ source ~/shell-productivity/rc.zsh
 
 ## Usage
 
-`ga` - **git add -A**
-`gp` - **git pull**
-`gc <message>` - **git commit -am <message>**
-`postpr` - **Done after a pull request is merged, switches to master and removes the pr branch and pulls**
+- `gpr <branch>` - **git checkout -b <branch> && git push origin <branch> git branch -D <branch>**
+- `ga` - **git add -A**
+- `gp` - **git pull**
+- `gc <message>` - **git commit -am <message>**
+- `postpr` - **Done after a pull request is merged, switches to master and removes the pr branch and pulls**
