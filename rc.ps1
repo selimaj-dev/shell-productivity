@@ -1,3 +1,9 @@
+# Remove conflicting aliases
+if (Test-Path Alias:gp) { Remove-Item Alias:gp -Force }
+if (Test-Path Alias:gc) { Remove-Item Alias:gc -Force }
+if (Test-Path Alias:ga) { Remove-Item Alias:ga -Force }
+if (Test-Path Alias:gpr) { Remove-Item Alias:ga -Force }
+
 function postpr {
     # Save current branch
     $current_branch = git symbolic-ref --short HEAD
