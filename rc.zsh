@@ -4,6 +4,7 @@ unalias gpr 2>/dev/null
 unalias gc 2>/dev/null
 unalias ga 2>/dev/null
 unalias gp 2>/dev/null
+unalias oc 2>/dev/null
 
 # --- Functions ---
 
@@ -46,4 +47,9 @@ ga() {
 
 gp() {
   git pull
+}
+
+
+oc() {
+  opencode
 }
